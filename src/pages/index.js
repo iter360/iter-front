@@ -8,7 +8,7 @@ export default function Home() {
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
-      Hola
+      <a className=' underline' href='https://iter360.com/'>Visitanos en ITER360</a>
     </main>
   )
 }
