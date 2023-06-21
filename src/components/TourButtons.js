@@ -16,13 +16,13 @@ const TourButtons = ({ buttonData }) => {
       {buttons.map((button) => {
         const { image, video, button_label_url, nombre_proyecto } = button;
         return (
-          <div className="flex w-full gap-2 bg-white rounded-lg p-3" key={button.id}>
+          <div className="flex w-full gap-6 items-center bg-white rounded-lg p-5" key={button.id}>
             {image && image.data && image.data.attributes && image.data.attributes.url ? (
               <Image loader={myLoader} src={image.data.attributes.url} width={100} height={100} className="object-contain rounded-lg" />
             ) : (
               ""
             )}
-            <div className="w-full flex flex-col justify-center items-start gap-2">
+            <div className="w-full flex flex-col justify-center items-start gap-2 max-w-[225px]">
               {!image.data ? <h1 className="flex items-center justify-center text-center font-bold my-2">{nombre_proyecto}</h1> : null}
               {button_label_url.map((btn) => (
                 <Link
